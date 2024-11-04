@@ -69,7 +69,7 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
 
 ## Uso
 
-La API estará disponible en `http://localhost:3000`.
+La API estará disponible en `http://localhost:3001`.
 
 ## Endpoints
 
