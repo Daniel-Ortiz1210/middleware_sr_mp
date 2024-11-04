@@ -17,6 +17,9 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
   - [4. Obtener Información de Usuario](#4-obtener-información-de-usuario)
   - [Autenticación y Seguridad](#autenticación-y-seguridad)
     - [1. Inicio de Sesión](#1-inicio-de-sesión)
+  - [Documentación de la API](#documentación-de-la-api)
+  - [Dockerización](#dockerización)
+  - [Seguridad](#seguridad)
 
 ## Tecnologías
 
@@ -154,3 +157,23 @@ POST /auth/login
     "email": "user@example.com",
     "password": "Password123!"
 }```
+
+## Documentación de la API
+
+La documentación de esta API está generada con Swagger y puede ser accedida en `/api-docs` una vez que la aplicación esté en funcionamiento. Incluye descripciones claras para cada endpoint, así como ejemplos de solicitudes y respuestas.
+
+## Dockerización
+
+La aplicación está dockerizada para facilitar su despliegue. Sigue los siguientes pasos para ejecutarla en un contenedor:
+
+1. Asegúrate de tener Docker y Docker Compose instalados.
+2. Construye y ejecuta el contenedor:
+    ```bash
+    docker-compose up --build
+    ```
+3. La aplicación estará disponible en `http://localhost:3000`.
+
+## Seguridad
+
+La API implementa protección contra XSS en todos los endpoints usando `helmet`.  
+El tráfico se asegura con TLS/SSL.
