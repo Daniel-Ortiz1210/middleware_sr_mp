@@ -42,8 +42,8 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tu_usuario/nombre_del_proyecto.git
-    cd nombre_del_proyecto
+    git https://github.com/Daniel-Ortiz1210/middleware_sr_mp.git
+    cd middleware_sr_mp
     ```
 
 2. Instala las dependencias:
