@@ -146,6 +146,7 @@ Genera un token JWT al verificar las credenciales del usuario.
 **Token**: Expira en el tiempo configurado en las variables de entorno (`JWT_EXPIRATION`).
 
 **Ejemplo de solicitud**:
+
 ```json
 {
     "email": "user@example.com",
