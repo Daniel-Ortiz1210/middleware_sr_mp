@@ -3,6 +3,7 @@
 Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueba técnica. La API permite realizar operaciones CRUD de usuarios y gestiona la autenticación mediante JWT. Además, está diseñada con medidas de seguridad como XSS, TLS, y protección mediante `helmet`, y su documentación está generada con Swagger.
 
 ## Tabla de Contenidos
+
 - [API de Gestión de Usuarios](#api-de-gestión-de-usuarios)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Tecnologías](#tecnologías)
@@ -11,7 +12,7 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
   - [Uso](#uso)
   - [Endpoints](#endpoints)
     - [1. Registro de Usuario](#1-registro-de-usuario)
-  - [2. Actualización de Usuario](#2-actualización-de-usuario)
+    - [2. Actualización de Usuario](#2-actualización-de-usuario)
 
 ## Tecnologías
 
@@ -32,12 +33,14 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
 ## Instalación
 
 1. Clona el repositorio:
+
     ```bash
     git clone https://github.com/tu_usuario/nombre_del_proyecto.git
     cd nombre_del_proyecto
     ```
 
 2. Instala las dependencias:
+
     ```bash
     npm install
     ```
@@ -53,11 +56,13 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
     ```
 
 4. Ejecuta las migraciones de la base de datos:
+
     ```bash
     npm run migrate
     ```
 
 5. Inicia el servidor:
+
     ```bash
     npm start
     ```
@@ -70,7 +75,7 @@ La API estará disponible en `http://localhost:3000`.
 
 ### 1. Registro de Usuario
 
-** POST /users/register **
+**POST /users/register**
 
 Registra un nuevo usuario.  
 **Validaciones**:
@@ -80,27 +85,31 @@ Registra un nuevo usuario.
 
 **Ejemplo de solicitud**:
 
-```json
-POST /users/register
-{
-    "email": "user@example.com",
-    "password": "Password123!"
-}```
+    ```bash
+    POST /users/register
+    {
+        "email": "user@example.com",
+        "password": "Password123!"
+    }
+    ```
 
-## 2. Actualización de Usuario
+### 2. Actualización de Usuario
 
 **PUT /users/:id**
 
 Actualiza la información de un usuario.
 
 **Validaciones**:
+
 - Verificar que el usuario exista.
 - Evitar duplicación de nombre y apellido en otros registros.
 
 **Ejemplo de solicitud**:
+
 ```json
 PUT /users/1
 {
     "firstName": "Juan",
     "lastName": "Pérez"
 }
+```
