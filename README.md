@@ -13,6 +13,10 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
   - [Endpoints](#endpoints)
     - [1. Registro de Usuario](#1-registro-de-usuario)
     - [2. Actualización de Usuario](#2-actualización-de-usuario)
+  - [3. Eliminación de Usuario](#3-eliminación-de-usuario)
+  - [4. Obtener Información de Usuario](#4-obtener-información-de-usuario)
+  - [Autenticación y Seguridad](#autenticación-y-seguridad)
+    - [1. Inicio de Sesión](#1-inicio-de-sesión)
 
 ## Tecnologías
 
@@ -107,9 +111,46 @@ Actualiza la información de un usuario.
 **Ejemplo de solicitud**:
 
 ```json
-PUT /users/1
 {
     "firstName": "Juan",
     "lastName": "Pérez"
 }
 ```
+
+## 3. Eliminación de Usuario
+
+**DELETE /users/:id**
+
+Elimina un usuario por ID.
+
+
+## 4. Obtener Información de Usuario
+
+**GET /users/:id**
+
+Devuelve la información de un usuario por ID.
+
+**Validación**: Devuelve un mensaje claro si el usuario no existe.
+
+**Ejemplo de solicitud**:
+```json
+GET /users/1
+````
+
+## Autenticación y Seguridad
+
+### 1. Inicio de Sesión
+
+**POST /auth/login**
+
+Genera un token JWT al verificar las credenciales del usuario.
+
+**Token**: Expira en el tiempo configurado en las variables de entorno (`JWT_EXPIRATION`).
+
+**Ejemplo de solicitud**:
+```json
+POST /auth/login
+{
+    "email": "user@example.com",
+    "password": "Password123!"
+}```
