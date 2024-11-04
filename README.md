@@ -151,7 +151,8 @@ Genera un token JWT al verificar las credenciales del usuario.
 {
     "email": "user@example.com",
     "password": "Password123!"
-}```
+}
+```
 
 ## Documentación de la API
 
@@ -162,10 +163,13 @@ La documentación de esta API está generada con Swagger y puede ser accedida en
 La aplicación está dockerizada para facilitar su despliegue. Sigue los siguientes pasos para ejecutarla en un contenedor:
 
 1. Asegúrate de tener Docker y Docker Compose instalados.
+
 2. Construye un contenedor nuevo para la aplicación usando el archivo `Dockerfile` y utiliza el archivo `docker-compose.yml` para construir la base de datos.
+
     ```bash
     docker-compose up --build
     ```
+
 3. Una vez levantada la base de datos, ejecuta:
 
     ```bash
@@ -179,8 +183,8 @@ La aplicación está dockerizada para facilitar su despliegue. Sigue los siguien
     ```bash
     node index.js
     ```
-4. La aplicación estará disponible en `http://localhost:3001`.
 
+4. La aplicación estará disponible en `http://localhost:3001`.
 
 ## Seguridad
 
