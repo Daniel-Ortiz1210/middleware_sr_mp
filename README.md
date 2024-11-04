@@ -56,10 +56,14 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
    Crea un archivo `.env` en el directorio raíz con las siguientes variables:
 
     ```plaintext
-    PORT=3000
-    DATABASE_URL=postgres://usuario:contraseña@localhost:5432/nombre_db
-    JWT_SECRET=tu_secreto_jwt
-    JWT_EXPIRATION=1h
+    PORT='3001'
+    JWT_SECRET='*!SrMiddlewareDevSecretKey!*'
+    MSSQL_SERVER_USER='sa'
+    MSSQL_SERVER_PASSWORD='Dex122706#'
+    MSSQL_SERVER_HOST='localhost'
+    MSSQL_SERVER_PORT='1433'
+    ACCEPT_EULA='Y'
+    MSSQL_SA_PASSWORD='Dex122706#'
     ```
 
 4. Ejecuta las migraciones de la base de datos:
