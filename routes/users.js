@@ -7,6 +7,8 @@ const router = express.Router();
 /**
  * @openapi
  * /users/{id}:
+ *   security:
+ *      - bearerAuth: []
  *   get:
  *     summary: Obtiene un usuario por ID
  *     description: Devuelve los detalles del usuario especificado por su ID.
@@ -78,8 +80,8 @@ const router = express.Router();
  *                   type: object
  *                   properties:
  *                     message:
- *                       type: string
- *                       example: "Ocurrió un error inesperado."
+ *                       type: string    
+ *                 example: "Ocurrió un error inesperado."
  */
 router.get('/:id', verifyTokenMiddleware, userDetailController);
 /**
