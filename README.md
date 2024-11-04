@@ -133,7 +133,7 @@ Devuelve la información de un usuario por ID.
 **Ejemplo de solicitud**:
 ```text
 GET /users/1
-````
+```
 
 ## Autenticación y Seguridad
 
@@ -147,7 +147,6 @@ Genera un token JWT al verificar las credenciales del usuario.
 
 **Ejemplo de solicitud**:
 ```json
-POST /auth/login
 {
     "email": "user@example.com",
     "password": "Password123!"
