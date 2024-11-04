@@ -22,10 +22,19 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: 'http://localhost:3000',
+                url: 'http://localhost:3001',
                 description: 'Servidor local',
             },
         ],
+        components: {
+                securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT', // Formato del token (opcional)
+                },
+                },
+            },
     },
     apis: ['./routes/*.js']
 };
@@ -33,6 +42,8 @@ const swaggerOptions = {
 const swaggerBase = swagger(swaggerOptions);
 
 app.use(bodyParser.json());
+
+app.use('/api/doc', swaggerUi.serve, swaggerUi.setup(swaggerBase));
 
 app.use(helmet());
 app.use(helmet.contentSecurityPolicy(
@@ -45,8 +56,6 @@ app.use(helmet.contentSecurityPolicy(
         
     }
 ))
-
-app.use('/api/doc', swaggerUi.serve, swaggerUi.setup(swaggerBase));
 
 app.use("/auth", authRouter);
 
