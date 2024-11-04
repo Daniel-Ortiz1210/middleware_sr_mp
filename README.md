@@ -70,20 +70,22 @@ La API estará disponible en `http://localhost:3000`.
 
 ### 1. Registro de Usuario
 
-**POST /users/register**
+** POST /users/register **
 
 Registra un nuevo usuario.  
 **Validaciones**:
+
 - Email único y con formato válido.
 - Contraseña de al menos 8 caracteres, con una letra mayúscula, una minúscula, un dígito y un carácter especial.
 
 **Ejemplo de solicitud**:
+
 ```json
 POST /users/register
 {
     "email": "user@example.com",
     "password": "Password123!"
-}````
+}```
 
 ## 2. Actualización de Usuario
 
@@ -96,7 +98,6 @@ Actualiza la información de un usuario.
 - Evitar duplicación de nombre y apellido en otros registros.
 
 **Ejemplo de solicitud**:
-
 ```json
 PUT /users/1
 {
