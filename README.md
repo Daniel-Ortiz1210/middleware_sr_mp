@@ -167,11 +167,25 @@ La documentación de esta API está generada con Swagger y puede ser accedida en
 La aplicación está dockerizada para facilitar su despliegue. Sigue los siguientes pasos para ejecutarla en un contenedor:
 
 1. Asegúrate de tener Docker y Docker Compose instalados.
-2. Construye y ejecuta el contenedor:
+2. Construye un contenedor nuevo para la aplicación usando el archivo `Dockerfile` y utiliza el archivo `docker-compose.yml` para construir la base de datos.
     ```bash
     docker-compose up --build
     ```
-3. La aplicación estará disponible en `http://localhost:3000`.
+3. Una vez levantada la base de datos, ejecuta:
+
+    ```bash
+    docker build -t app .
+    ```
+
+    ```bash
+    docker run --name app  -p 3001:3001 app -d 
+    ```
+
+    ```bash
+    node index.js
+    ```
+4. La aplicación estará disponible en `http://localhost:3001`.
+
 
 ## Seguridad
 
