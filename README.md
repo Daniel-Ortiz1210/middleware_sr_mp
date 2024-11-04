@@ -66,17 +66,6 @@ Este proyecto es una API RESTful desarrollada en Node.js como parte de una prueb
     MSSQL_SA_PASSWORD='Dex122706#'
     ```
 
-4. Ejecuta las migraciones de la base de datos:
-
-    ```bash
-    npm run migrate
-    ```
-
-5. Inicia el servidor:
-
-    ```bash
-    npm start
-    ```
 
 ## Uso
 
@@ -86,7 +75,7 @@ La API estará disponible en `http://localhost:3000`.
 
 ### 1. Registro de Usuario
 
-**POST /users/register**
+**POST /users/**
 
 Registra un nuevo usuario.  
 **Validaciones**:
@@ -97,11 +86,13 @@ Registra un nuevo usuario.
 **Ejemplo de solicitud**:
 
     ```bash
-    POST /users/register
+    POST /users/
     {
-        "email": "user@example.com",
-        "password": "Password123!"
-    }
+    "firstName": "Daniel",
+    "lastName": "Ortiz",
+    "email": "invalidemaiql@gmail.com",
+    "password": "Dex122706!"
+}
     ```
 
 ### 2. Actualización de Usuario
@@ -140,7 +131,7 @@ Devuelve la información de un usuario por ID.
 **Validación**: Devuelve un mensaje claro si el usuario no existe.
 
 **Ejemplo de solicitud**:
-```json
+```text
 GET /users/1
 ````
 
@@ -164,7 +155,7 @@ POST /auth/login
 
 ## Documentación de la API
 
-La documentación de esta API está generada con Swagger y puede ser accedida en `/api-docs` una vez que la aplicación esté en funcionamiento. Incluye descripciones claras para cada endpoint, así como ejemplos de solicitudes y respuestas.
+La documentación de esta API está generada con Swagger y puede ser accedida en `/api-doc` una vez que la aplicación esté en funcionamiento. Incluye descripciones claras para cada endpoint, así como ejemplos de solicitudes y respuestas.
 
 ## Dockerización
 
