@@ -177,7 +177,7 @@ La aplicación está dockerizada para facilitar su despliegue. Sigue los siguien
     ```
 
     ```bash
-    docker run --name app  -p 3001:3001 app -d 
+     docker run --name myapp -p 3001:3001 app
     ```
 
     ```bash
